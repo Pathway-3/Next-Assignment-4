@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import UserProfile from "../UserProfile";
 import axios from "axios";
+import Link from "next/link";
 
 export default function page() {
   const [userName, setUserName] = useState("");
@@ -20,13 +21,17 @@ export default function page() {
     getUser();
   }, []);
 
-  
-
   return (
-    <UserProfile
-      userName={userName}
-      userBio={userBio}
-      userHobbies={userHobbies}
-    />
+    <div>
+      <nav>
+        <Link href="/">Home</Link>
+        <Link href="/profile">Profile</Link>
+      </nav>
+      <UserProfile
+        userName={userName}
+        userBio={userBio}
+        userHobbies={userHobbies}
+      />
+    </div>
   );
 }

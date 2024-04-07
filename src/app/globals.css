@@ -4,3 +4,14 @@ body {
   font-size: 16px;
 }
 
+nav {
+  background-color: rgba(0, 255, 191, 0.518);
+  padding: 20px;
+  border-bottom: solid black 1px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin: 0.5rem;
+}
